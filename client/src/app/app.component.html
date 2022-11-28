@@ -1,0 +1,8 @@
+<div class="container" [style.background-color]="colors[selectedDay]">
+  <div *ngIf="page == Page.CALENDAR" class="calendar">
+    <div *ngFor="let image of images; index as i">
+      <img [src]="image" width="150px" (click)="selectDay(i)" />
+    </div>
+  </div>
+  <app-day *ngIf="page == Page.DAY" [image]="images[selectedDay]"></app-day>
+</div>

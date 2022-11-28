@@ -1,7 +1,16 @@
-import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
+import { Application } from "https://deno.land/x/oak/mod.ts";
 
-serve((_req) => {
-  return new Response("Hello World!", {
-    headers: { "content-type": "text/plain" },
-  });
+const app = new Application();
+app.use(async (ctx) => {
+  try {
+    await ctx.send({
+      root: `${Deno.cwd()}/static`,
+      index: "index.html",
+    });
+  } catch {
+    ctx.response.status = 404;
+    ctx.response.body = "404 File not found";
+  }
 });
+
+await app.listen({ port: 80 });
