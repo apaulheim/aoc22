@@ -9,7 +9,7 @@ async function handleRequest(request: Request): Promise<Response> {
   // 3. We send the asset back to the client.
 
   if (pathname.startsWith("/favicon")) {
-    const file = await Deno.readFile("./static/favicon.ico");
+    const file = await Deno.readFile("./server/static/favicon.ico");
     return new Response(file, {
       headers: {
         "content-type": "image/x-icon",
@@ -17,7 +17,7 @@ async function handleRequest(request: Request): Promise<Response> {
     });
   }
   if (pathname.startsWith("/main")) {
-    const file = await Deno.readFile("./static/main.js");
+    const file = await Deno.readFile("./server/static/main.js");
     return new Response(file, {
       headers: {
         "content-type": "text/javascript",
@@ -25,7 +25,7 @@ async function handleRequest(request: Request): Promise<Response> {
     });
   }
   if (pathname.startsWith("/polyfills")) {
-    const file = await Deno.readFile("./static/polyfills.js");
+    const file = await Deno.readFile("./server/static/polyfills.js");
     return new Response(file, {
       headers: {
         "content-type": "text/javascript",
@@ -33,7 +33,7 @@ async function handleRequest(request: Request): Promise<Response> {
     });
   }
   if (pathname.startsWith("/runtime")) {
-    const file = await Deno.readFile("./static/runtime.js");
+    const file = await Deno.readFile("./server/static/runtime.js");
     return new Response(file, {
       headers: {
         "content-type": "text/javascript",
@@ -41,7 +41,7 @@ async function handleRequest(request: Request): Promise<Response> {
     });
   }
   if (pathname.startsWith("/styles.css")) {
-    const file = await Deno.readFile("./static/styles.css");
+    const file = await Deno.readFile("./server/static/styles.css");
     return new Response(file, {
       headers: {
         "content-type": "text/css",
@@ -50,7 +50,7 @@ async function handleRequest(request: Request): Promise<Response> {
   }
   if (pathname.startsWith("/assets/advent")) {
     const [_, end] = pathname.split("advent");
-    const file = await Deno.readFile(`./static/assets/advent${end}`);
+    const file = await Deno.readFile(`./server/static/assets/advent${end}`);
     return new Response(file, {
       headers: {
         "content-type": "image/gif",
@@ -58,7 +58,7 @@ async function handleRequest(request: Request): Promise<Response> {
     });
   }
 
-  const file = await Deno.readFile("./static/index.html");
+  const file = await Deno.readFile("./server/static/index.html");
   return new Response(file, {
     headers: {
       "content-type": "text/html; charset=utf-8",
