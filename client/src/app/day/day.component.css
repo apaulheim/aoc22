@@ -1,8 +1,0 @@
-:host {
-  cursor: pointer;
-}
-.decoration {
-  position: fixed;
-  bottom: 0;
-  left: calc(50% - 125px);
-}

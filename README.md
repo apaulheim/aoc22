@@ -1,5 +1,11 @@
-# aoc22
+# fresh project
+
+### Usage
+
+Start the project:
 
 ```
-deno run --allow-net=:8000 --allow-read --watch ./server.ts
+deno task start
 ```
+
+This will watch the project directory and restart as necessary.
