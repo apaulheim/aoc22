@@ -16,6 +16,16 @@ body {
 }
 .decoration {
   position: fixed;
-  bottom: 0;
-  left: calc(50% - 125px);
+  left: 0;
+  top: calc(50% - 125px);
+}
+.container-day {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.container-code {
+  z-index: 2;
 }
