@@ -8,10 +8,12 @@ interface DayIslandProps {
 enum Language {
   JS,
   PY,
+  RS,
+  GO,
 }
 
 export default function DayIsland({ dayNr }: DayIslandProps) {
-  const languages = ["js", "py"];
+  const languages = ["js", "py", "rs", "go"];
   const images = [
     "/Advent_calendar_01.jpg",
     "/Advent_calendar_02.jpg",
@@ -41,7 +43,7 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
   ];
 
   const solutions = [
-    [Language.JS, Language.PY],
+    [Language.JS, Language.PY, Language.RS, Language.GO],
   ];
 
   const [selectedLang, setSelectedLang] = useState(-1);
