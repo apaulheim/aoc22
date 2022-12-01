@@ -7,6 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("Pastel-Aesthetic-Christmas-Wallpaper-19.png");
+  background-size: cover;
 }
 .calendar {
     display: grid;
@@ -25,6 +27,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
+  background-image: url("Pastel-Aesthetic-Christmas-Wallpaper-19.png");
+  background-size: cover;
 }
 .container-code {
   z-index: 2;

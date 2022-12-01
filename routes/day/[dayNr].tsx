@@ -41,7 +41,9 @@ export default function DayPage(props: PageProps) {
       </Head>
       <main
         class="container-day"
-        style={`background-color: ${colors[parseInt(dayNr) - 1]}`}
+        style={`/*background: linear-gradient(45deg, ${
+          colors[parseInt(dayNr) - 1]
+        }, ${colors[parseInt(dayNr) - 1]}44);*/`}
       >
         <DayIsland dayNr={parseInt(dayNr)} />
       </main>

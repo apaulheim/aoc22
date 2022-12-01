@@ -30,9 +30,41 @@ export default function Home() {
     "/Advent_calendar_25.jpg",
   ];
 
+  const colors = [
+    "#aed1d3", // blau
+    "#fbd3c9", // rosa
+    "#ffffff",
+    "#e6e6e6",
+    "#ffffff",
+    "#f8efe8",
+    "#ffffff",
+    "#e6e6e6",
+    "#ffffff",
+    "#fbd3c9", // rosa
+    "#ffffff",
+    "#f8efe8",
+    "#fbd3c9", // rosa
+    "#aed1d3", // blau
+    "#ffffff",
+    "#fbd3c9", // rosa
+    "#ffffff",
+    "#f8efe8",
+    "#ffffff",
+    "#aed1d3", // blau
+    "#aed1d3", // blau
+    "#f8efe8",
+    "#ffffff",
+    "#e6e6e6",
+    "#f8efe8",
+  ];
+
   const renderDay = (image: string, dayNr: number) => {
     return (
-      <div>
+      <div
+        style={`background: linear-gradient(45deg, ${colors[dayNr]}, ${
+          colors[dayNr]
+        }44);box-shadow: 1px 2px 3px rgba(0,0,0,0.2);`}
+      >
         <a href={`/day/${dayNr + 1}`}>
           <img src={image} width="150" />
         </a>
