@@ -4,6 +4,8 @@
     cursor: pointer;
     margin-top: 100px;
     margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .box, .lid {
     position: relative;

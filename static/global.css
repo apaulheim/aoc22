@@ -29,6 +29,10 @@ body {
 .container-code {
   z-index: 2;
 }
+.presents {
+  display: flex;
+  flex-flow: row wrap;
+}
 .replit {
   padding: 10px;
   background: rgb(235,235,235);

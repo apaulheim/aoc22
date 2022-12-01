@@ -7,10 +7,11 @@ interface DayIslandProps {
 
 enum Language {
   JS,
+  PY,
 }
 
 export default function DayIsland({ dayNr }: DayIslandProps) {
-  const languages = ["js"];
+  const languages = ["js", "py"];
   const images = [
     "/Advent_calendar_01.jpg",
     "/Advent_calendar_02.jpg",
@@ -40,7 +41,7 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
   ];
 
   const solutions = [
-    [Language.JS],
+    [Language.JS, Language.PY],
   ];
 
   const [selectedLang, setSelectedLang] = useState(-1);
@@ -53,7 +54,7 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
             language={lang}
             onClick={(lang: Language) => {
               setSelectedLang(lang);
-              console.log("selectedLAng", lang);
+              console.log("selectedLang", lang);
             }}
           />
         ))
@@ -121,7 +122,9 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
   return (
     <>
       <div class="container-code">
-        {renderPresents()}
+        <div class="presents">
+          {renderPresents()}
+        </div>
         {renderReplit()}
         {renderGithubEmbed()}
       </div>
