@@ -63,3 +63,72 @@ a {
 iframe {
   margin-top:10px;
 }
+.day {
+  width: 150px;
+  height: 150px;
+  ;
+}
+.solutions {
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: flex-end;
+  align-content: flex-start;
+  align-items: flex-end;
+  width: 150px;
+  height: 150px;
+  z-index: 3;
+}
+
+.solution {
+  position: relative;   
+  margin: 3px;
+  height: 35px;
+}
+
+.solution img{
+  width: 20px;
+  height: 20px;
+  
+}
+.solution svg {
+  position: absolute;
+  top: -5px;
+  left:7px;
+  width: 20px;
+}
+.solution img {
+  top:5px;
+  
+  border-radius: 5px;
+  padding: 5px;
+  
+}
+.solution.js img {
+  border: 2px solid hsl(89, 63%, 70%);
+  background-color: hsl(89, 63%, 95%);
+}
+.solution.py img {
+  border: 2px solid hsl(44, 75%, 70%);
+  background-color: hsl(44, 75%, 95%);
+}
+.solution.rs img {
+  border: 2px solid hsl(21, 100%, 70%);
+  background-color: hsl(21, 100%, 95%);
+}
+.solution.go img {
+  border: 2px solid hsl(186, 54%, 70%);
+  background-color: hsl(186, 54%, 95%);
+}
+.solution.js path {
+  fill: hsl(89, 63%, 50%);
+}
+.solution.py path {
+  fill: hsl(44, 75%, 50%);
+}
+.solution.rs path {
+  fill: hsl(21, 100%, 50%);
+}
+.solution.go path {
+  fill: hsl(186, 54%, 50%);
+}

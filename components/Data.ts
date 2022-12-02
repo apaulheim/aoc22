@@ -11,6 +11,17 @@ export const solutions = [
   [Language.JS, Language.PY, Language.RS, Language.GO],
   [Language.JS, Language.GO],
 ];
+export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
+  21,
+  100,
+  78,
+  90,
+], [
+  186,
+  54,
+  78,
+  90,
+]];
 
 export const colors = [
   "#aed1d3", // blau

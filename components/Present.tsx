@@ -1,14 +1,11 @@
+import { languageColors } from "./Data.ts";
+
 type PresentProps = { language: number; onClick: (lang: number) => void };
 
 export default function Present(
   { language, onClick }: PresentProps,
 ) {
-  const colors = [[89, 63, 78, 90], [44, 75, 78, 90], [21, 100, 78, 90], [
-    186,
-    54,
-    78,
-    90,
-  ]];
+  const colors = languageColors;
   const images = ["js.png", "py.png", "rs.png", "go.png"];
   const hslvalues = colors[language];
 
