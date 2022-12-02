@@ -44,6 +44,7 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
 
   const solutions = [
     [Language.JS, Language.PY, Language.RS, Language.GO],
+    [Language.JS],
   ];
 
   const [selectedLang, setSelectedLang] = useState(-1);
@@ -68,14 +69,16 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
   const renderGithubEmbed = () => {
     if (selectedLang >= 0) {
       return (
-        <script
-          src={`https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fapaulheim%2Faoc22code%2Fblob%2Fmain%2F${
+        <iframe
+          frameBorder="0"
+          width="800px"
+          height="500px"
+          srcDoc={`<html><body><script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fapaulheim%2Faoc22code%2Fblob%2Fmain%2F${
             languages[selectedLang]
           }%2Fday${dayNr}.${
             languages[selectedLang]
-          }&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>`}
-        >
-        </script>
+          }&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script></body></html>`}
+        />
       );
     }
     return null;
