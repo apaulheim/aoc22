@@ -1,51 +1,18 @@
 import { useState } from "preact/hooks";
 import Present from "../components/Present.tsx";
+import {
+  imagesPng,
+  Language,
+  languages,
+  solutions,
+} from "../components/Data.ts";
 
 interface DayIslandProps {
   dayNr: number;
 }
 
-enum Language {
-  JS,
-  PY,
-  RS,
-  GO,
-}
-
 export default function DayIsland({ dayNr }: DayIslandProps) {
-  const languages = ["js", "py", "rs", "go"];
-  const images = [
-    "/Advent_calendar_01.png",
-    "/Advent_calendar_02.png",
-    "/Advent_calendar_03.png",
-    "/Advent_calendar_04.png",
-    "/Advent_calendar_05.png",
-    "/Advent_calendar_06.png",
-    "/Advent_calendar_07.png",
-    "/Advent_calendar_08.png",
-    "/Advent_calendar_09.png",
-    "/Advent_calendar_10.png",
-    "/Advent_calendar_11.png",
-    "/Advent_calendar_12.png",
-    "/Advent_calendar_13.png",
-    "/Advent_calendar_14.png",
-    "/Advent_calendar_15.png",
-    "/Advent_calendar_16.png",
-    "/Advent_calendar_17.png",
-    "/Advent_calendar_18.png",
-    "/Advent_calendar_19.png",
-    "/Advent_calendar_20.png",
-    "/Advent_calendar_21.png",
-    "/Advent_calendar_22.png",
-    "/Advent_calendar_23.png",
-    "/Advent_calendar_24.png",
-    "/Advent_calendar_25.png",
-  ];
-
-  const solutions = [
-    [Language.JS, Language.PY, Language.RS, Language.GO],
-    [Language.JS],
-  ];
+  const images = imagesPng;
 
   const [selectedLang, setSelectedLang] = useState(-1);
 
