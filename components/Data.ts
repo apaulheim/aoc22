@@ -11,6 +11,8 @@ export const solutions = [
   [Language.JS, Language.PY, Language.RS, Language.GO],
   [Language.JS, Language.GO],
   [Language.JS],
+  [Language.JS],
+  [Language.JS],
 ];
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
   21,
