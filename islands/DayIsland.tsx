@@ -14,7 +14,9 @@ interface DayIslandProps {
 export default function DayIsland({ dayNr }: DayIslandProps) {
   const images = imagesPng;
 
-  const [selectedLang, setSelectedLang] = useState(-1);
+  const [selectedLang, setSelectedLang] = useState(
+    dayNr - 1 < solutions.length && solutions[dayNr - 1].length > 0 ? 0 : -1,
+  );
 
   const renderPresents = () => {
     if (dayNr - 1 < solutions.length) {
