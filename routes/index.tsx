@@ -5,13 +5,16 @@ import {
   languages,
   solutions,
 } from "../components/Data.ts";
-import MiniPresent from "../components/MiniPresent.tsx";
+import { MiniPresent, MiniPresentType } from "../components/MiniPresent.tsx";
 
 export default function Home() {
   const renderSolutions = (dayNr: number) => {
     if (solutions[dayNr]) {
       return solutions[dayNr].map((solution) => (
-        <MiniPresent solution={solution} />
+        <MiniPresent
+          type={MiniPresentType.Language}
+          id={solution}
+        />
       ));
     }
   };

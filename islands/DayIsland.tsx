@@ -6,6 +6,9 @@ import {
   languages,
   solutions,
 } from "../components/Data.ts";
+import { MiniPresent } from "../components/MiniPresent.tsx";
+import { MiniPresentType } from "../components/MiniPresent.tsx";
+import { Navbar } from "../components/Navbar.tsx";
 
 interface DayIslandProps {
   dayNr: number;
@@ -17,6 +20,10 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
   const [selectedLang, setSelectedLang] = useState(
     dayNr - 1 < solutions.length && solutions[dayNr - 1].length > 0 ? 0 : -1,
   );
+
+  const renderNavbar = () => {
+    return;
+  };
 
   const renderPresents = () => {
     if (dayNr - 1 < solutions.length) {
@@ -95,6 +102,9 @@ export default function DayIsland({ dayNr }: DayIslandProps) {
 
   return (
     <>
+      <div class="navbar-container">
+        <Navbar />
+      </div>
       <div class="container-code">
         <div class="presents">
           {renderPresents()}

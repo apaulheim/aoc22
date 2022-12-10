@@ -25,13 +25,17 @@ body {
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-flow: column nowrap;
   align-items: start;
   background-image: url("Pastel-Aesthetic-Christmas-Wallpaper-19.png");
   background-size: cover;
 }
 .container-code {
   z-index: 2;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  align-items: center;
 }
 .presents {
   display: flex;
@@ -80,54 +84,83 @@ iframe {
   z-index: 3;
 }
 
-.solution {
+.minipresent {
   position: relative;   
   margin: 3px;
   height: 35px;
 }
 
-.solution img{
+.minipresent img{
   width: 20px;
   height: 20px;
   box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
 }
-.solution svg {
+.minipresent svg {
   position: absolute;
   top: -5px;
   left:5px;
   width: 20px;
 }
-.solution img {
+.minipresent img {
   top:5px;
   border-radius: 5px;
   padding: 5px;
   background-color: white;
 }
-.solution.js img {
+.minipresent.js img {
   /* border: 2px solid hsl(89, 63%, 70%); */
   /* background-color: hsl(89, 63%, 95%); */
 }
-.solution.py img {
+.minipresent.py img {
   /* border: 2px solid hsl(44, 75%, 70%); */
   /* background-color: hsl(44, 75%, 95%); */
 }
-.solution.rs img {
+.minipresent.rs img {
   /* border: 2px solid hsl(21, 100%, 70%); */
   /* background-color: hsl(21, 100%, 95%); */
 }
-.solution.go img {
+.minipresent.go img {
   /* border: 2px solid hsl(186, 54%, 70%); */
   /* background-color: hsl(186, 54%, 95%); */
 }
-.solution.js path {
+.minipresent.js path {
   fill: hsl(89, 63%, 50%);
 }
-.solution.py path {
+.minipresent.py path {
   fill: hsl(44, 75%, 50%);
 }
-.solution.rs path {
+.minipresent.rs path {
   fill: hsl(21, 100%, 50%);
 }
-.solution.go path {
+.minipresent.go path {
   fill: hsl(186, 54%, 50%);
+}
+.navbar-container {
+  display: flex;
+  flex-flow: column nowrap;  
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.minipresent.navbar path {
+  fill: darkgreen;
+}
+.minipresent.navbar div {
+  color: white;
+  font-family: sans-serif;
+  background-color: darkgreen;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
