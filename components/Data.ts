@@ -23,6 +23,9 @@ export const solutions = [
   [Language.JS],
   [Language.JS],
   [Language.JS], // Day 15
+  [],
+  [],
+  [Language.JS],
 ];
 export const languageColors = [[89, 63, 78, 90], [44, 75, 78, 90], [
   21,
